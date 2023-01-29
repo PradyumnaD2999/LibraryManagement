@@ -1,0 +1,44 @@
+Relational Schema:
+
+1) Translate strong entities and unnest composite attributes:
+
+i) member (mid, lastname, firstname, email, address, contact, dob)
+ii) document (did, title, publisher, year, edition, issueno, issuedate, editor, name, author, genre, lid)
+iii) librarian (lid, lastname, firstname, email, address, contact, dob, doj)
+iv) record (recid, total, issued)
+v) documenttype (dtid, doctype) 
+vi) loginaccess (aid, pwd)
+
+2) Translate weak entities and unnest composite attributes:
+
+i) member (mid, lastname, firstname, email, address, contact, dob)
+ii) membership (doj, mid, borrowcount, latefees)
+iii) document (did, title, publisher, year, edition, issueno, issuedate, editor, name, author, genre, lid)
+iv) librarian (lid, lastname, firstname, email, address, contact, dob, doj)
+v) record (recid, total, issued)
+vi) documenttype (dtid, doctype) 
+vii) loginaccess (aid, pwd)
+
+3) Translate multivalued attributes:
+
+i) member (mid, lastname, firstname, email, address, contact, dob)
+ii) membership (doj, mid, borrowcount, latefees)
+iii) document (did, title, publisher, year, edition, issueno, issuedate, editor, name, author, genre, lid)
+vi) librarian (lid, lastname, firstname, email, address, contact, dob, doj)
+vii) record (recid, total, issued)
+viii) documenttype (dtid, doctype) 
+ix) loginaccess (aid, pwd)
+
+4) Translate relationships:
+
+i) member (mid, lastname, firstname, email, address, contact, dob, did, duedate, returndate, ontime)
+ii) membership (doj, mid, borrowcount, latefees)
+iii) memlogin (mid, aid)
+iv) document (did, title, publisher, year, edition, issueno, issuedate, editor, name, author, genre, lid, dtid)
+vii) details (did, recid)
+ix) librarian (lid, lastname, firstname, email, address, contact, dob, doj)
+x) liblogin (lid, aid)
+xi) record (recid, total, issued) + remaining
+xii) documenttype (dtid, doctype)
+xiii) loginaccess (aid, pwd)
+
