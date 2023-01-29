@@ -1,3 +1,7 @@
+•	Designed a web-based application for library management system where member can borrow and return documents, check membership statistics, etc., and librarian can manage documents and members.
+
+•	Developed the application using Servlet, JSP, JDBC, PostgreSQL and Maven.
+
 Project Setup:
 
 1) In eclipse, select the parent folder of libraryApp directory as workspace.
